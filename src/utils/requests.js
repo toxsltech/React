@@ -1,23 +1,22 @@
-/* @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
-@author    : Shiv Charan Panjeta < shiv@toxsl.com >
+/*
+@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+@author     : Shiv Charan Panjeta < shiv@toxsl.com >
  
 All Rights Reserved.
-Proprietary and confidential :  All information contained here in is, and remains
-the property of ToXSL Technologies Pvt. Ltd. and it's partners.
-Unauthorized copying of this file, via any medium is strictly prohibited. */
-
+Proprietary and confidential :  All information contained herein is, and remains
+the property of ToXSL Technologies Pvt. Ltd. and its partners.
+Unauthorized copying of this file, via any medium is strictly prohibited.
+*/
 import * as req from "../utils/http";
 
 export const PostReq = async (path, body) => {
-
   /**request for post method */
   return await req.http
     .post(path, body)
     .then((response) => {
       return response;
     })
-    .catch((err) => {
-    });
+    .catch((err) => { });
 };
 
 export const getReq = async (path) => {
@@ -41,6 +40,7 @@ export const putReq = async (path, body) => {
 };
 
 export const delReq = async (path, body) => {
+
   /**request for delete method */
   return await req.http
     .delete(path, body)
